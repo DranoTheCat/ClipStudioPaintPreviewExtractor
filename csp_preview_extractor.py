@@ -5,7 +5,6 @@ import os
 import pathlib
 import sqlite3
 import bitstring
-import sys
 
 valid_extensions = [ ".clip", ".csp" ]
 
@@ -20,7 +19,7 @@ l = [ [sg.Text("Clip Studio Paint Preview PNG Extractor.\n\nChoose the top-level
        sg.Button("Exit")]
     ]
 
-window = sg.Window(title="CSP PNG Extractor", layout=l, margins=(50, 20))
+window = sg.Window(title="CSP PNG Extractor", icon="icons/favicon.ico", layout=l, margins=(50, 20))
 textbox = window['_LogBox_']
 
 def logline(msg):
